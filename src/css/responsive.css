@@ -1,0 +1,653 @@
+/* ========================
+   E&C KRASNA SOLUTIONS
+   Responsive Styles
+   ======================== */
+
+/* ========================
+   TABLET STYLES (1024px and below)
+   ======================== */
+
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .toc-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .featured-items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+    .featured-item-primary {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .profile-content,
+    .welcome-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-text h2,
+    .welcome-message h2,
+    .services h2,
+    .team h2,
+    .testimonials h2,
+    .contact h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ========================
+   MOBILE LARGE STYLES (768px and below)
+   ======================== */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(26, 26, 26, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        gap: 0;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 20px;
+        border-bottom: 1px solid var(--border-gray);
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    body {
+        margin-top: 0;
+    }
+
+    .hero {
+        margin-top: 70px;
+        height: 70vh;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .toc-header h2 {
+        font-size: 2rem;
+    }
+
+    .featured-items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+        gap: 15px;
+    }
+
+    .featured-item-primary {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .featured-item {
+        padding: 15px;
+    }
+
+    .featured-item-primary h3,
+    .featured-item-primary p,
+    .featured-item-secondary h3,
+    .featured-item-secondary p {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .profile-image,
+    .welcome-image {
+        margin: 0;
+    }
+
+    .profile-text h2,
+    .welcome-message h2 {
+        font-size: 1.8rem;
+    }
+
+    .profile-text p,
+    .welcome-message p {
+        font-size: 1rem;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about-card {
+        padding: 25px;
+    }
+
+    .about-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .services h2 {
+        font-size: 2rem;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-icon {
+        font-size: 2.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .team h2 {
+        font-size: 2rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member {
+        padding: 15px;
+    }
+
+    .team-member img {
+        height: 250px;
+    }
+
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        padding: 25px;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact-container {
+        gap: 30px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 40px 0 20px;
+    }
+}
+
+/* ========================
+   MOBILE SMALL STYLES (480px and below)
+   ======================== */
+
+@media (max-width: 480px) {
+    .nav-container {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .navbar {
+        border-bottom: 1px solid var(--border-gray);
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2.5px;
+    }
+
+    .hero {
+        margin-top: 60px;
+        height: 50vh;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .toc-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .featured-items {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 120px;
+    }
+
+    .featured-item-primary {
+        grid-column: span 1;
+    }
+
+    .featured-item {
+        padding: 15px;
+    }
+
+    .featured-item h3 {
+        font-size: 1rem;
+    }
+
+    .featured-item p {
+        font-size: 0.85rem;
+    }
+
+    .profile-text h2,
+    .welcome-message h2,
+    .about h2,
+    .services h2,
+    .team h2,
+    .testimonials h2,
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-text,
+    .welcome-message {
+        padding: 0 15px;
+    }
+
+    .profile-text p,
+    .welcome-message p {
+        font-size: 0.95rem;
+    }
+
+    .about-card {
+        padding: 20px;
+    }
+
+    .about-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .about-card p {
+        font-size: 0.95rem;
+    }
+
+    .services-grid {
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 0.95rem;
+    }
+
+    .team-member {
+        padding: 10px;
+    }
+
+    .team-member img {
+        height: 200px;
+    }
+
+    .team-member h3 {
+        font-size: 1.1rem;
+    }
+
+    .team-member p {
+        font-size: 0.85rem;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .testimonial-card::before {
+        font-size: 3rem;
+    }
+
+    .contact-container {
+        gap: 20px;
+    }
+
+    .contact-form {
+        gap: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+    .form-submit {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+
+    .contact-info {
+        gap: 20px;
+    }
+
+    .contact-item {
+        padding: 15px;
+    }
+
+    .footer-content {
+        gap: 20px;
+    }
+
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.95rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================
+   EXTRA SMALL DEVICES (320px and below)
+   ======================== */
+
+@media (max-width: 320px) {
+    .logo {
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .toc-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .profile-text h2,
+    .welcome-message h2,
+    .about h2,
+    .services h2,
+    .team h2,
+    .testimonials h2,
+    .contact h2 {
+        font-size: 1.3rem;
+    }
+
+    .featured-item {
+        padding: 15px;
+    }
+
+    .featured-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-card h3,
+    .team-member h3 {
+        font-size: 1rem;
+    }
+
+    .contact-item {
+        padding: 10px;
+        border-left-width: 2px;
+    }
+}
+
+/* ========================
+   LANDSCAPE ORIENTATION (Tablets)
+   ======================== */
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 300px;
+        padding: 40px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+
+    section {
+        padding: 40px 0 !important;
+    }
+}
+
+/* ========================
+   HIGH DPI DISPLAYS (Retina)
+   ======================== */
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    .nav-link::after {
+        height: 1px;
+    }
+
+    .hamburger span {
+        height: 1.5px;
+    }
+}
+
+/* ========================
+   PRINT STYLES
+   ======================== */
+
+@media print {
+    .navbar,
+    .hamburger,
+    .cta-button,
+    .contact-form,
+    footer {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .hero {
+        height: auto;
+        background-color: white;
+    }
+
+    .hero-overlay {
+        display: none;
+    }
+
+    .hero-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    a {
+        color: black;
+    }
+
+    .accent-yellow,
+    .highlight {
+        color: black;
+    }
+}
+
+/* ========================
+   DARK MODE (if system dark mode is detected)
+   ======================== */
+
+@media (prefers-color-scheme: dark) {
+    /* Already using dark mode as default */
+}
+
+/* ========================
+   LIGHT MODE (for users who prefer light mode)
+   ======================== */
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary-dark: #f5f5f5;
+        --primary-black: #ffffff;
+        --accent-gold: #d4af37;
+        --accent-yellow: #ffc107;
+        --text-light: #333333;
+        --text-gray: #666666;
+        --border-gray: #cccccc;
+        --white: #000000;
+    }
+
+    .navbar {
+        background-color: rgba(245, 245, 245, 0.98);
+        border-bottom-color: var(--border-gray);
+    }
+
+    .nav-link {
+        color: var(--text-light);
+    }
+
+    .hero-overlay {
+        background: linear-gradient(135deg, rgba(245, 245, 245, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%);
+    }
+}
+
+/* ========================
+   REDUCED MOTION
+   ======================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ========================
+   FOCUS VISIBLE (Accessibility)
+   ======================== */
+
+:focus-visible {
+    outline: 2px solid var(--accent-yellow);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent-yellow);
+    outline-offset: 2px;
+}

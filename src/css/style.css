@@ -93,7 +93,15 @@ button {
     transition: var(--transition);
     display: flex;
     align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
     gap: 10px;
+    transition: var(--transition);
+    color: inherit;
+    text-decoration: none;
 }
 
 .logo-img {
@@ -289,6 +297,23 @@ button {
     font-size: 1.1rem;
 }
 
+.toc-description {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, rgba(212, 175, 55, 0.03) 100%);
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(255, 193, 7, 0.1);
+}
+
+.toc-description p {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
 .featured-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -306,6 +331,7 @@ button {
     border: 1px solid var(--border-gray);
     display: flex;
     align-items: flex-end;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(255, 193, 7, 0.15);
 }
 
 .featured-item::before {
@@ -328,14 +354,14 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    opacity: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+    opacity: 1;
     transition: opacity 0.3s ease;
     z-index: 2;
 }
 
 .featured-item:hover::after {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .featured-item img {
@@ -365,6 +391,7 @@ button {
     position: relative;
     z-index: 3;
     padding: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .featured-item-primary p {
@@ -373,6 +400,7 @@ button {
     z-index: 3;
     padding: 0 20px 20px 20px;
     font-size: 0.95rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .featured-item-secondary h3 {
@@ -382,6 +410,7 @@ button {
     position: relative;
     z-index: 3;
     padding: 20px 20px 8px 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .featured-item-secondary p {
@@ -390,10 +419,11 @@ button {
     z-index: 3;
     padding: 0 20px 20px 20px;
     font-size: 0.85rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .featured-item:hover {
-    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+    box-shadow: 0 15px 45px rgba(255, 193, 7, 0.3), 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* ========================
@@ -504,8 +534,8 @@ button {
 }
 
 .welcome-avatar {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
@@ -740,10 +770,12 @@ button {
 .team-member img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     border-radius: 10px;
     margin-bottom: 20px;
     transition: var(--transition);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .team-member:hover img {
